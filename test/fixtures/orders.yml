@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rerefence: MyString
+  name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  description: MyText
+  client_id: 1
+  kind_id: 1
+  ordered_at: 2012-12-16 19:16:53
+  delivery_estimated_at: 2012-12-16 19:16:53
+  delivered_at: 2012-12-16 19:16:53
+
+two:
+  rerefence: MyString
+  name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
+  description: MyText
+  client_id: 1
+  kind_id: 1
+  ordered_at: 2012-12-16 19:16:53
+  delivery_estimated_at: 2012-12-16 19:16:53
+  delivered_at: 2012-12-16 19:16:53

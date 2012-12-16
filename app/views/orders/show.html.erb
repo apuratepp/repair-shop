@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rerefence:</b>
+  <%= @order.rerefence %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @order.name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @order.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @order.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @order.phone %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @order.description %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @order.client_id %>
+</p>
+
+<p>
+  <b>Kind:</b>
+  <%= @order.kind_id %>
+</p>
+
+<p>
+  <b>Ordered at:</b>
+  <%= @order.ordered_at %>
+</p>
+
+<p>
+  <b>Delivery estimated at:</b>
+  <%= @order.delivery_estimated_at %>
+</p>
+
+<p>
+  <b>Delivered at:</b>
+  <%= @order.delivered_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,21 @@
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :rerefence %>
+    <%= f.input :name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :description %>
+    <%= f.input :client_id %>
+    <%= f.input :kind_id %>
+    <%= f.input :ordered_at %>
+    <%= f.input :delivery_estimated_at %>
+    <%= f.input :delivered_at %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
