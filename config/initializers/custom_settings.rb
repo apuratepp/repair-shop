@@ -1,0 +1,1 @@
+CUSTOM_SETTINGS = YAML.load_file(Rails.root.join('config', 'custom_settings.yml'))[Rails.env]

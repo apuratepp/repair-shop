@@ -1,0 +1,9 @@
+development:
+  gmail:
+    username:
+    password: 
+      
+production:
+  gmail:
+    username:
+    password: 
