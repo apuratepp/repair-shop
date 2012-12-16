@@ -3,7 +3,6 @@ class Mailer < ActionMailer::Base
   
   def order_received(order)
     @order = order
-    mail :to => order.email, :subject => "InThe Repair Shop | Order Received"
-    
+    mail :to => order.email, :subject => "InThe Repair Shop | Order Received"    
   end
 end

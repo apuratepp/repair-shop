@@ -43,7 +43,7 @@ RepairShop::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'baci.lindsaar.net',
+    :domain               => 'inthe.es',
     :user_name            => CUSTOM_SETTINGS['gmail']['username'],
     :password             => CUSTOM_SETTINGS['gmail']['password'],
     :authentication       => 'plain',
