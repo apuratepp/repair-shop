@@ -10,7 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216180138) do
+ActiveRecord::Schema.define(:version => 20121216181653) do
+
+  create_table "orders", :force => true do |t|
+    t.string   "rerefence"
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "description"
+    t.integer  "client_id"
+    t.integer  "kind_id"
+    t.datetime "ordered_at"
+    t.datetime "delivery_estimated_at"
+    t.datetime "delivered_at"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
 
   create_table "services", :force => true do |t|
     t.string   "reference"
