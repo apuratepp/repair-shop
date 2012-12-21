@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
   #before_filter :allow_cross_domain_access
+  
+  ActiveRecord::Base.include_root_in_json = false
   
   def allow_cross_domain_access
     headers["Access-Control-Allow-Origin"] = "*"
