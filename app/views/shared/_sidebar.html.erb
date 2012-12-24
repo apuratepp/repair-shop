@@ -1,0 +1,7 @@
+<div class="well" style="padding: 8px 0;">
+<ul class="nav nav-list">
+	<li class="nav-header">Orders</li>
+	<li class="<%= 'active' if controller.action_name == 'index' %>"><%= link_to t("Orders"), orders_path %></li>
+	<li class="<%= 'active' if controller.action_name == 'new' %>"><%= link_to t("New Order"), new_order_path %>
+</ul>
+</div>
