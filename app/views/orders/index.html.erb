@@ -3,11 +3,8 @@
     <th></th>
     <th>Rerefence</th>
     <th>Name</th>
-    <th>Last name</th>
     <th>Email</th>
     <th>Phone</th>
-    <th>Client</th>
-    <th>Kind</th>
     <th>Ordered at</th>
     <th>Delivery estimated at</th>
     <th></th>
@@ -18,12 +15,9 @@
   <tr>
     <td><%= link_to 'Show', order %></td>
     <td><%= order.rerefence %></td>
-    <td><%= order.name %></td>
-    <td><%= order.last_name %></td>
+    <td><%= order.name %> <%= order.last_name %></td>
     <td><%= order.email %></td>
     <td><%= order.phone %></td>
-    <td><%= order.client_id %></td>
-    <td><%= order.kind_id %></td>
     <td><%= order.ordered_at.localtime %></td>
     <td><%= order.delivery_estimated_at.localtime %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
