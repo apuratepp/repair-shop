@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    # current_user.reset_authentication_token!
     @orders = Order.all
 
     respond_to do |format|
