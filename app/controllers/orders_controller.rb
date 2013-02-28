@@ -43,7 +43,8 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     #@order = Order.new(params[:order])
-    @order = Order.find(params[:id])
+    #@order = Order.find(params[:id])
+    @order = Order.new(:ordered_at => Time.now, :delivery_estimated_at => 1.week.from_now)
 
     respond_to do |format|
       if @order.save
