@@ -25,7 +25,8 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.json
   def new
-    @order = Order.new
+    # @order = Order.new
+    @order = Order.create!(:ordered_at => Time.now, :delivery_estimated_at => 1.week.from_now)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +42,8 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(params[:order])
+    #@order = Order.new(params[:order])
+    @order = Order.find(params[:id])
 
     respond_to do |format|
       if @order.save
@@ -62,8 +64,13 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
-        format.html { redirect_to @order, :notice => 'Order was successfully updated.' }
-        format.json { head :no_content }
+        if Mailer.order_received(@order).deliver
+          format.html { redirect_to @order, :notice => 'Order was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { redirect_to @order, :notice => 'Order was successfully updated but could not send email.' }
+          format.json { head :no_content }
+        end
       else
         format.html { render :action => "edit" }
         format.json { render :json => @order.errors, :status => :unprocessable_entity }
