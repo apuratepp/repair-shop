@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     # current_user.reset_authentication_token!
-    @orders = Order.all
+    @orders = Order.order(:updated_at).reverse
 
     respond_to do |format|
       format.html # index.html.erb
