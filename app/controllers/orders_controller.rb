@@ -68,13 +68,9 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.update_attributes(params[:order])
-        if Mailer.order_received(@order).deliver
-          format.html { redirect_to @order, :notice => 'Order was successfully updated.' }
-          format.json { head :no_content }
-        else
-          format.html { redirect_to @order, :notice => 'Order was successfully updated but could not send email.' }
-          format.json { head :no_content }
-        end
+        # Mailer.order_received(@order).deliver
+        format.html { redirect_to @order, :notice => 'Order was successfully updated.' }
+        format.json { head :no_content }
       else
         format.html { render :action => "edit" }
         format.json { render :json => @order.errors, :status => :unprocessable_entity }
