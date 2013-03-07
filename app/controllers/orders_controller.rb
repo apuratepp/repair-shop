@@ -44,7 +44,10 @@ class OrdersController < ApplicationController
   def create
     #@order = Order.new(params[:order])
     #@order = Order.find(params[:id])
-    @order = Order.new(:ordered_at => Time.now, :delivery_estimated_at => 1.week.from_now)
+    @order = Order.new(
+              :ordered_at => Time.now, 
+              :email => "name@example.com",
+              :delivery_estimated_at => 1.week.from_now)
 
     respond_to do |format|
       if @order.save
