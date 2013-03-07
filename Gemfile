@@ -49,4 +49,4 @@ gem 'twitter-bootstrap-rails'
 gem 'best_in_place'
 
 # problema amb Heroku
-gem 'tilt', '1.3.3
+gem 'tilt', '1.3.3'
