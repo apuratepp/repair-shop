@@ -47,6 +47,7 @@ gem 'therubyracer'
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
 gem 'best_in_place'
+gem 'cancan'
 
 # problema amb Heroku
 gem 'tilt', '1.3.3'
